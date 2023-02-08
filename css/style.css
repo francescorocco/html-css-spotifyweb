@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --footer-color: #272727;
+    --sidebar-color: #000000;
+    --main-color: #131821;
+
+    --text-white: #fff;
+}
+
+
+                        /* debug */
+
+.debug #main-nav{
+    background-color: yellow;
+    height: 50px;
+}
+
+.debug .album{
+    background-color: tomato;
+    height: 200px;
+}
+.debug .left-footer, .debug .right-footer{
+    background-color: yellowgreen;
+    width: calc(100% / 3);
+}
+
+.debug .center-footer{
+    background-color: gold;
+    width: calc(100% / 3);
+}
+
+.debug #small-app-icon .icon{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    background-color: deeppink;
+}
+
+.debug #big-app-icon .icon{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    background-color: moccasin;
+}
+
+.debug #user{
+    width: 100%;
+    height: 50px;
+    background-color: deepskyblue;
+}
+
+                        /* utility */
+
+.flex{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.list-no-decoration{
+    list-style: none;
+}
+
+.text-white{
+    color: var(--text-white);
+}
+
+
+
+
+
+                        /* regole css */
+main{
+    height: calc(100vh - 100px);
+}
+
+#cta{
+    position: fixed;
+    height: 100px;
+    width: calc(100% - 50px);
+    top:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    color: var(--text-white);
+}
+
+#sidebar{
+    width: 50px;
+    background-color: var(--sidebar-color);
+}
+
+#playlist-nav ul{
+    overflow-y: scroll;
+}
+
+#playlist-nav{
+    display: none;
+}
+
+#big-app-icon{
+    display: none;
+}
+
+#main-container{
+    width: calc(100% - 50px);
+    background-color: var(--main-color);
+    padding-top:100px;
+    overflow-y: scroll;
+    
+}
+
+#sidebar{
+    position:relative
+}
+
+#user{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+
+                /* main sections */
+
+.box-albums{
+    padding: 20px;
+    width: 50%;
+}
+
+
+                /* footer */
+
+footer{
+    height: 100px;
+    background-color: var(--footer-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         /* media query */
+
+@media screen and (min-width: 576px) {
+    #sidebar{
+        width: 200px;
+    }
+    
+    #main-container{
+        width: calc(100% - 200px);
+    }
+    
+    #cta{
+        width: calc(100% - 200px);
+    }
+
+    #playlist-nav{
+        display: block;
+    }
+
+    #small-app-icon{
+        display: none;
+    }
+
+    #big-app-icon{
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .box-albums{
+        width: 25%;
+    }
+
+
+}
+
+
+@media screen and (min-width: 992px) {
+    .box-albums{
+        width: calc(100% / 6);
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+}
