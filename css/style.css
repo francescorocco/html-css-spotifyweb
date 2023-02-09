@@ -14,29 +14,7 @@
 
     --icon-color: #d1d1d1;
     --icon-text-color: #777777;
-}
 
-
-                        /* debug */
-
-.debug #main-nav{
-    background-color: yellow;
-    height: 50px;
-}
-
-.debug .album{
-    background-color: tomato;
-    height: 200px;
-}
-.debug .left-footer, .debug .right-footer{
-    background-color: yellowgreen;
-    width: 280px;
-}
-
-.debug .center-footer{
-    background-color: gold;
-    width: 100%;
-}
 
 
 
@@ -197,8 +175,6 @@ main{
     display: none;
 }
 
-
-
 .id-name{
     color: white;
     font-weight: 800;
@@ -209,18 +185,78 @@ main{
     background-color: var(--main-color);
     padding-top:100px;
     overflow-y: scroll;
-    
 }
 
+#main-nav{
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#main-nav ul{
+    justify-content: center;
+}
+
+#main-nav ul li {
+    width: calc(100% / 4);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#main-nav ul li a{
+    text-decoration: none;
+    color: var(--icon-text-color);
+}
 
                 /* main sections */
+
 
 .box-albums{
     padding: 20px;
     width: 50%;
 }
 
+.album img{
+    width: 100%;
+    display: block;
+}
 
+.section-name{
+    padding-left: 20px;
+    color: var(--text-white);
+}
+
+.album-name {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 1rem;
+    padding-top:20px
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    color: var(--icon-text-color);
+    font-size: 0.8rem;
+    padding-top: 10px;
+    font-weight: 700;
+}
+
+#created-for-you {
+    padding: 40px 0;
+}
+
+.suggestion-subtitle {
+    color: var(--icon-text-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+img.rounded {
+    object-fit: cover;
+    border-radius: 50%;
+}
                 /* footer */
 
 footer{
@@ -282,6 +318,10 @@ footer{
         width: calc(100% - 200px);
     }
 
+
+    #main-nav ul li{
+        width: calc(100% / 3);
+    }
 }
 
 
@@ -290,12 +330,19 @@ footer{
         width: 25%;
     }
 
+    #main-nav ul li{
+        width: calc(100% / 5);
+    }
 
 }
 
 
 @media screen and (min-width: 992px) {
     .box-albums{
+        width: calc(100% / 6);
+    }
+
+    #main-nav ul li{
         width: calc(100% / 6);
     }
 }
