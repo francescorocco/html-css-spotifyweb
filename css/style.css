@@ -109,15 +109,10 @@ main{
     height: 80px;
 }
 
-#playlist-nav ul{
-    overflow: scroll;
+#big-app-icon, #playlist-nav{
+    display: none;
 }
 
-#playlist-nav, #sidebar-top{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
 
 #main-container{
     width: calc(100% - 50px);
@@ -165,16 +160,22 @@ footer{
         width: 200px;
     }
     
+    #playlist-nav ul{
+        overflow-y: scroll;
+    }
+    
+    #playlist-nav, #sidebar-top{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
     #main-container{
         width: calc(100% - 200px);
     }
     
     #cta{
         width: calc(100% - 200px);
-    }
-
-    #playlist-nav{
-        display: block;
     }
 
     #small-app-icon{
