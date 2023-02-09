@@ -10,6 +10,10 @@
     --main-color: #131821;
 
     --text-white: #fff;
+    --profile-background: #737373;
+
+    --icon-color: #d1d1d1;
+    --icon-text-color: #777777;
 }
 
 
@@ -34,23 +38,7 @@
     width: 100%;
 }
 
-.debug #small-app-icon .icon{
-    width: 100%;
-    height: 20px;
-    margin: 10px 0;
-    background-color: deeppink;
-}
 
-.debug #big-app-icon .icon{
-    width: 100%;
-    height: 20px;
-    margin: 10px 0;
-    background-color: moccasin;
-}
-
-.debug #sidebar-bottom{
-    background-color: aqua;
-}
 
                         /* utility */
 
@@ -73,8 +61,12 @@
 
 
 
-
                         /* regole css */
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 main{
     height: calc(100vh - 100px);
     overflow: hidden;    
@@ -99,20 +91,104 @@ main{
     width: 50px;
     background-color: var(--sidebar-color);
     min-height: 500px;
+    text-align: center;
+    font-weight: 600;
 }
 
 #sidebar-top{
-    height: calc(100% - 80px);
+    height: calc(100% - 63px);
 }
 
-#sidebar-bottom{
-    height: 80px;
+#playlist-nav{
+    display: none;
+    padding-top: 15px;
 }
 
-#big-app-icon, #playlist-nav{
+#sidebar-top a{
+    text-decoration: none;
+}
+
+.big-logo{
+    display: none;
+    width: 130px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.small-logo{
+    padding-top:10px;
+}
+
+.icon-name{
+    color: var(--icon-text-color);
     display: none;
 }
 
+.small-icon{
+    display: inline-block;
+    width: 25px;
+    vertical-align: middle;
+    color: var(--icon-color);
+}
+
+.add-playlist {
+    margin: 10px 0;
+    color: var(--icon-text-color);
+}
+
+.add-playlist span{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#playlist-nav ul li{
+    padding: 5px 0;
+    color: var(--icon-text-color);
+}
+
+#playlist-nav .add-playlist a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: gray;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+}
+
+.profile-icon{
+    display: block;
+    background-color: var(--profile-background);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+#sidebar-top li{
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+#sidebar-bottom hr{
+    height: 1px;
+    background-color: var(--icon-text-color);
+    width: calc(100% - 15px);
+    border: none;
+    margin: 10px 0;
+    display: none;
+}
+
+
+
+.id-name{
+    color: white;
+    font-weight: 800;
+}
 
 #main-container{
     width: calc(100% - 50px);
@@ -158,8 +234,22 @@ footer{
 @media screen and (min-width: 576px) {
     #sidebar{
         width: 200px;
+        text-align: left;
+        padding-left: 15px;
     }
     
+    #sidebar-top{
+        height: calc(100% - 90px);
+    }
+
+    #sidebar-top .small-logo{
+        display: none;
+    }
+    
+    #sidebar-top .big-logo, .icon-name, #sidebar-bottom hr{
+        display: inline-block;
+    }
+
     #playlist-nav ul{
         overflow-y: scroll;
     }
@@ -178,13 +268,6 @@ footer{
         width: calc(100% - 200px);
     }
 
-    #small-app-icon{
-        display: none;
-    }
-
-    #big-app-icon{
-        display: block;
-    }
 }
 
 
