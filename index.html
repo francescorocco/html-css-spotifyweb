@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -237,15 +238,55 @@
 
     <footer class="flex">
 
-        <div class="left-footer">
+        <div class="left-footer flex">
+            <img src="img/sinister.jpeg" alt="sinister album photo">
+            <div>
+                <h5 class="current-artist">Sinister</h5>
+                <span class="current-song">Brano Nome</span>
+            </div>
+           <div>
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-regular fa-folder"></i></span>
+           </div>
             
         </div>
 
         <div class="center-footer">
+            <div class="player-buttons flex">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-regular fa-circle-play play-button"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+
+            <div class="player-bar flex">
+                <span>0:25</span>
+                <div class="bar-container">
+                    <div class="media-bar">
+                        <div class="media-value">
+                            <div class="media-interaction"></div>
+                        </div>
+                    </div>
+                </div>
+                <span>4:30</span>
+
+            </div>
 
         </div>
 
-        <div class="right-footer">
+        <div class="right-footer flex">
+            <i class="fa-solid fa-list-ul"></i>
+            <i class="fa-solid fa-display"></i>
+            <i class="fa-solid fa-volume-high"></i>
+
+            <div class="volume-container">
+                <div class="media-bar">
+                    <div class="media-value">
+                        <div class="media-interaction"></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </footer>
