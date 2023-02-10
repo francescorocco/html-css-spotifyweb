@@ -18,8 +18,6 @@
     --media-bar-color: #595959;
 }
 
-
-
                         /* utility */
 
 .flex{
@@ -38,8 +36,19 @@
     color: var(--text-white);
 }
 
+.green-border-left{
+    border-left: 3px solid greenyellow;
+}
 
-
+.green-border-bottom:before {
+    content: '';
+    height: 3px;
+    background-color: greenyellow;
+    width: 45px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+}
 
                         /* regole css */
 
@@ -75,12 +84,17 @@ body{
     margin-right: 10px;
 }
 
+#cta span a:hover{
+    transform: scale(1.3);
+}
 #cta a {
     text-decoration: none;
     color: white;
     border: 1px solid;
     padding: 10px 40px;
     border-radius: 20px;
+    transition: all 0.3s linear;
+
 }
 
                 /* sidebar */
@@ -98,9 +112,18 @@ body{
     height: calc(100% - 63px);
 }
 
+#sidebar-bottom{
+    padding-left: 15px;
+}
+
 #playlist-nav{
     display: none;
     padding-top: 15px;
+    padding-left: 15px;
+}
+
+#small-app-icon ul li{
+    padding-left:15px;
 }
 
 #sidebar-top a{
@@ -214,7 +237,11 @@ body{
     text-decoration: none;
     color: var(--icon-text-color);
     font-size: 0.8rem;
+    position: relative;
 }
+
+
+
 
                 /* main sections */
 
@@ -329,7 +356,10 @@ footer{
 
 .center-footer i.play-button {
     font-size: 2rem;
+    transition: all 0.3s linear;
 }
+
+
 
 .right-footer {
     color: white;
@@ -389,14 +419,64 @@ footer{
     background-color: yellowgreen;
 }
 
+                /* animation */
 
+.center-footer i.play-button:hover {
+    transform: scale(1.3);
+}
+                                        /* overlay */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    color: var(--text-white);
+    font-size: 3rem;
+    display: none;
+}
+
+.wrapper-overlay:hover .overlay,.wrapper-overlay:hover .overlay-rounded{
+    display: inline-block;
+}
+
+.wrapper-overlay {
+    position: relative;
+}
+
+.wrapper-overlay i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-rounded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    color: var(--text-white);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3rem;
+    border-radius: 50%;
+    display: none;
+}
+
+#main-nav ul li a:hover, #small-app-icon .icon-name:hover, #user .icon-name:hover, #playlist-nav ul li:hover{
+    color: var(--text-white);
+}
                          /* media query */
 
 @media screen and (min-width: 576px) {
     #sidebar{
         width: 200px;
         text-align: left;
-        padding-left: 15px;
     }
     
     #sidebar-top{
